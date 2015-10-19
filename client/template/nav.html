@@ -5,15 +5,21 @@
                 <li class="name">
                   <h1>BIBLIMANIA</h1>
                 </li>
-                 <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+                
                 <li class="toggle-topbar menu-icon"><a href="{{pathFor route='accueil'}}"><span>Menu</span></a></li>
               </ul>
               <section class="top-bar-section">
                 <!-- Right Nav Section -->
                 <ul class="right">
                     <li class="has-form">
-            <a href="{{pathFor route='connection'}}" id="at-nav-button" class="button">Connection</a>
-          </li>
+                        {{#if notLogged}}
+                        <a href="{{pathFor route='connection'}}" id="at-nav-button" class="button">connection</a>
+                        {{/if}}
+                        {{#if currentUser }}
+                        <a href="#" id="a-deconnection" class="button">déconnection</a>
+                        {{/if}}
+                        
+                    </li>
                 </ul>
                 <!-- Left Nav Section -->
                 <ul class="left">

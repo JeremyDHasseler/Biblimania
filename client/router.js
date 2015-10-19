@@ -26,13 +26,13 @@ Router.route('/connection', function () {
 Router.route('/creation-compte', function(){
    this.layout('Layout');
     
-    this.render('creation-compte');
+    this.render('creationCompte');
 });
 
 Router.route('/oublie-mot-de-passe', function(){
     this.layout('Layout')
     
-    this.render('oublie-mot-de-passe');
+    this.render('oublieMotDePasse');
 });
 
     
