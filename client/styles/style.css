@@ -1,0 +1,15 @@
+/* 
+ *    
+ *  Mise en forme de la partie graphique de l'app
+ *  Titre
+ */
+.top-bar .title-area .name h1{
+    color:#008CBA !important;
+    margin: 0 5px 0 5px !important;
+    font-weight: bold;
+}
+
+
+#content {
+    padding-top: 70px;
+}

@@ -1,0 +1,48 @@
+<template name="creation-compte">
+   <div class="row">
+    <div class="small-12 medium-6 large-4 medium-centered large-centered columns">
+        <div class="at-form">      
+            <div class="at-title">
+                <h3>Création d'un compte</h3>
+             </div>
+
+            <div class="at-pwd-form">
+                <form id="at-pwd-form" novalidate="">
+                    <!-- Champs email -->
+                    <div class="at-input row">
+                        <div class="large-12 columns">      
+                            <label for="at-field-email">
+                              Email 
+                            </label>      
+                          <input type="email" id="at-field-email" name="at-field-email" placeholder="Email" aria-label="Email ">      
+                        </div>
+                    </div>   
+                    <!-- fin du champs email -->
+                    <!-- Champs mot de passe -->
+                    <div class="at-input row">
+                        <div class="large-12 columns">
+                            <label for="at-field-password">
+                              Mot de passe 
+                            </label>
+                          <input type="password" id="at-field-password" name="at-field-password" placeholder="Mot de passe" aria-label="Password ">
+                        </div>
+                    </div>  
+                    <!-- fin du champs mot de passe -->
+                    <!-- Champs mot de passe confirmation -->
+                    <div class="at-input row">
+                        <div class="large-12 columns">
+                            <label for="at-field-password">
+                              Mot de passe (confirmation)
+                            </label>
+                          <input type="password" id="at-field-password" name="at-field-password" placeholder="Mot de passe" aria-label="Password ">
+                        </div>
+                    </div>  
+                    <!-- fin du champs mot de passe confirmation -->                    
+
+                    <button type="submit" class="at-btn button" id="at-btn">Enregistrer</button>
+                </form>
+              </div> 
+        </div>
+    </div>
+  </div>
+</template>

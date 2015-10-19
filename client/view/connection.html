@@ -1,0 +1,50 @@
+<template name="connection">
+   <div class="row">
+    <div class="small-12 medium-6 large-4 medium-centered large-centered columns">
+        <div class="at-form">      
+            <div class="at-title">
+                <h3>Connection</h3>
+             </div>
+
+            <div class="at-pwd-form">
+                <form role="form" id="at-pwd-form" novalidate="" action="#" method="POST">
+                    <!-- Champs email -->
+                    <div class="at-input row">
+                        <div class="large-12 columns">      
+                            <label for="at-field-email">
+                              Mail 
+                            </label>      
+                          <input type="email" id="at-field-email" name="at-field-email" placeholder="Mail" aria-label="Email ">      
+                        </div>
+                    </div>   
+                    <!-- fin du champs email -->
+                    <!-- Champs mot de passe -->
+                    <div class="at-input row">
+                        <div class="large-12 columns">
+                            <label for="at-field-password">
+                              Mot de passe 
+                            </label>
+                          <input type="password" id="at-field-password" name="at-field-password" placeholder="Mot de passe" aria-label="Password ">
+                        </div>
+                    </div>  
+                    <!-- fin du champs mot de passe -->
+                    <!-- bouton de navigation -->
+                    <div class="at-pwd-link">
+                         <p>
+                            <a href="/oublie-mot-de-passe" id="at-forgotPwd" class="at-link at-pwd">Vous avez oubliez votre mot de passe?</a>
+                         </p>
+                    </div>
+                    <!-- fin du bouton de navigation -->
+                    <button type="submit" class="at-btn button" id="at-btn">Connection</button>
+                </form>
+              </div> 
+              <!-- Bouton de navigation vers la création d'un compte ? --> 
+              <div class="at-signup-link">
+                 <p>Vous avez un compte ? <a href="/sign-up" id="at-signUp" class="at-link at-signup">Création</a>
+                 </p>
+              </div>
+              <!-- fin bouton de navigation vers la création d'un compte -->
+        </div>
+    </div>
+  </div>
+</template>
