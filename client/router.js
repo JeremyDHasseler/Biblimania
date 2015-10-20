@@ -49,8 +49,23 @@ Router.route('/admin/categories-media/nouveau', function(){
     this.render('categorieMediaUpdate');
 }, {layoutTemplate: 'LayoutAdmin', name: 'categorieMediaNew'});
 
-// Route administration
-//Router.route('/admin/Media', {name: 'admin.Media'});
+// Route media
+Router.route('/admin/media', {layoutTemplate: 'LayoutAdmin', name: 'media'});
+
+// Route media/edition
+Router.route('/admin/media/edition/:_id',{
+    layoutTemplate: 'LayoutAdmin', 
+    name: 'mediaUpdate',
+    data: function () { return { data: Media.findOne(this.params._id)} }
+});
+
+// Route media/nouveau
+Router.route('/admin/media/nouveau', function(){
+    this.render('mediaUpdate');
+}, {layoutTemplate: 'LayoutAdmin', name: 'mediaNew'});
+
+
+
 
 
 //Si l'utilisateur n'est pas authentifié, redirection vers la page d'erreur d'access

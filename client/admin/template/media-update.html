@@ -1,0 +1,65 @@
+<template name="mediaUpdate">
+   <div class="row">
+    <div class="small-12 medium-6 large-9 medium-centered large-centered columns">
+        <div class="at-form">      
+            <div class="at-title">
+                <h3>Création d'un média</h3>
+             </div>
+
+            <div class="at-catM-form">
+                <form id="at-catM-form">
+                    <!-- Champs Nom -->
+                    <div class="at-input row">
+                        <div class="large-12 columns">      
+                            <label for="input-title">
+                              Titre 
+                            </label>      
+                            
+                            <input type="text" id="input-title" name="input-title" 
+                                   value="{{#if isUpdate}}{{ data.title }}{{/if}}" 
+                                   placeholder="Titre" 
+                                   aria-label="title ">   
+                            
+                          
+                        </div>
+                    </div>   
+                    <!-- fin du champs Nom -->
+                    <!-- Champs Category -->
+                    <div class="at-input row">
+                        <div class="large-12 columns">      
+                            <label for="input-Nom">
+                              Catégorie 
+                            </label>      
+                            
+                            <select id="select-category" name="select-category">
+                               <option value=""></option>
+                                {{#each allCategoriesMedia }}
+                                  <option value="{{ _id }}">{{ name }}</option>
+                                {{/each }}-->
+                            </select>  
+                        </div>                        
+                    </div> 
+                    <!-- fin du champs category -->
+                    <!-- Champs URL -->
+                    <div class="at-input row">
+                        <div class="large-12 columns">      
+                            <label for="input-url">
+                              Url 
+                            </label>      
+                            
+                            <input type="text" id="input-url" name="input-url" 
+                                   value="{{#if isUpdate}}{{ data.url }}{{/if}}" 
+                                   placeholder="Url" 
+                                   aria-label="Url ">   
+                            
+                          
+                        </div>
+                    </div>   
+                    <!-- fin du champs URL -->                    
+                        <button type="submit" class="at-btn button small" id="input-btn">Enregistrer</button>
+                </form>
+              </div> 
+        </div>
+    </div>
+  </div>
+</template>

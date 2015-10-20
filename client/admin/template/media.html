@@ -1,0 +1,35 @@
+<template name="media">
+
+        <h3>média</h3>
+        <a href="{{pathFor route='mediaNew'}}" class="button small">Nouveau</a>
+        <hr>
+         <table>
+          <thead>
+            <tr>
+              <th width="20"></th>
+              <th width="150">titre</th>
+              <th>Catégorie</th>
+              <th>Auteur</th>
+              <th>Création</th>
+              <th width="150">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+              {{#each allMedias}}
+                   <tr>
+                      <td></td>
+                      <td>{{ title }}</td>
+                      <td>{{categoryMedia categoryId }}</td>
+                      <td>{{author authorId }}</td>
+                      <td>{{formatDate createdAt }}</td>
+                      <td>
+                          <a href="/admin/media/edition/{{ _id}}" title="editer">
+                              <i class="fa fa-pencil fa-2x"></i>
+                          </a>
+                          <a href="#" id="a-delete" title="supprimer"><i class="fa fa-remove fa-2x"></i></a>
+                      </td>
+                    </tr>
+              {{/each}}
+          </tbody>
+        </table>
+</template>
