@@ -43,7 +43,6 @@ Template.creationCompte.events({
         }else{
             helpers.validation().errorInputs([inputConfirmation], helpers.validation().htmlErrorPassword, true);
         }
-            
     }
 });
             

@@ -13,3 +13,10 @@
     padding-top: 70px;
 }
 
+.leftSideBar{
+    margin-top: 44px;
+}
+.rightPanel{
+    width: 100%;
+    padding-left: 150px;   
+}

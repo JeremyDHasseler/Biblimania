@@ -1,10 +1,9 @@
 Template.nav.events({
    'click a#a-deconnection': function(){
        // Déconnection de l'utilisateur courant 
-       Meteor.logout();
-       
-       // redirection vers la page d'accueil
-       Router.go('/'); 
+       Meteor.logout(function(){
+          Router.go('accueil');
+       });
    }
 });
 

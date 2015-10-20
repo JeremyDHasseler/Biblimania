@@ -10,6 +10,8 @@ Template.connection.events({
         Meteor.loginWithPassword(user.email, user.password, function(error){
             if(error){
                 helpers.validation().errorInputs([inputEmail, inputPassword], 'L\'email ou le mot de passe est incorrect', true); 
+            }else{
+                Router.go('/admin')   
             }
         });
         

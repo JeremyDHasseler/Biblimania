@@ -1,38 +1,53 @@
 Router.configure({
   layoutTemplate: 'Layout' //Template de base
 });
-// Route Accueil
-Router.route('/', function () {
-  // Ajout à la route le template de base
-  this.layout('Layout');
+/*
+ *
+ *      Routes Public
+ *
+ */
 
-  // Affiche le template accueil
-  this.render('accueil');
-},{name: "accueil"});
+// Route Accueil
+Router.route('/', {name: "accueil"});
 
 // Route Besoin d'aide
-Router.route('/besoin-d-aide', function(){
-    this.layout('Layout');
-    
-    this.render('besoinDAide');
-});
+Router.route('/besoin-d-aide', {name: 'besoinAide'});
+
 // Route Connection
-Router.route('/connection', function () {
-  this.layout('Layout');
+Router.route('/connection', {name: 'connection'});
 
-  this.render('connection');
-});
 // Route Creation Compte
-Router.route('/creation-compte', function(){
-   this.layout('Layout');
-    
-    this.render('creationCompte');
-});
+Router.route('/creation-compte', {name: 'creationCompte'});
 
-Router.route('/oublie-mot-de-passe', function(){
-    this.layout('Layout')
-    
-    this.render('oublieMotDePasse');
-});
+// Route oublie du mot de passe
+Router.route('/oublie-mot-de-passe', {name: 'oublieMotDePasse'});
 
-    
+/*
+ *
+ *      Routes Administration
+ *
+ */
+
+// Route administration
+Router.route('/admin', {layoutTemplate: 'LayoutAdmin', name: 'admininistration'});
+
+// Route administration
+//Router.route('/admin/user', {name: 'admin.user'});
+
+// Route administration
+Router.route('/admin/CategoryMedia', {name: 'admin.CategoryMedia'});
+
+// Route administration
+//Router.route('/admin/Media', {name: 'admin.Media'});
+
+
+//Si l'utilisateur n'est pas authentifié, redirection vers la page d'erreur d'access
+var requireLogin = function () {
+    if (Meteor.user()) {
+            this.render(this.loadingTemplate);
+        } else {
+            this.render('accessDenied');
+        }
+}
+
+Router.onBeforeAction(requireLogin, { only: ['admin'] });

@@ -1,5 +1,6 @@
 <head>
   <title>BIBLIMANIA</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -15,4 +16,23 @@
     
     {{> footer }}
 
+</template>
+
+<template name="LayoutAdmin">
+    {{> nav}}
+    <div class="row">
+    <div class="fixed leftSideBar">
+        <div class="hide-for-small">
+           <div class="sidebar">
+                       {{> navAdmin}}
+                       </div>
+        </div>
+    </div>
+    <div class="rightPanel">
+
+        <div id="content">
+          {{> yield}}
+        </div> 
+    </div>
+ </div>    
 </template>
