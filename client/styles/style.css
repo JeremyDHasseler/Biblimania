@@ -14,9 +14,17 @@
 }
 
 .leftSideBar{
-    margin-top: 44px;
+    
+    float: left;
+    position: absolute;
+    left: 0;
+    top:44px;
 }
 .rightPanel{
     width: 100%;
-    padding-left: 150px;   
+    padding-left: 170px;   
+}
+.rightPanel #content{
+        padding: 0 !important;
+        top: 44px;
 }

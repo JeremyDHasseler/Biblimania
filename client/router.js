@@ -34,8 +34,20 @@ Router.route('/admin', {layoutTemplate: 'LayoutAdmin', name: 'admininistration'}
 // Route administration
 //Router.route('/admin/user', {name: 'admin.user'});
 
-// Route administration
-Router.route('/admin/CategoryMedia', {name: 'admin.CategoryMedia'});
+// Route categories-media
+Router.route('/admin/categories-media', {layoutTemplate: 'LayoutAdmin', name: 'categoriesMedia'});
+
+// Route categories-media/edition
+Router.route('/admin/categories-media/edition/:_id',{
+    layoutTemplate: 'LayoutAdmin', 
+    name: 'categorieMediaUpdate',
+    data: function () { return { data: CategoriesM.findOne(this.params._id)} }
+});
+
+// Route categories-media/nouveau
+Router.route('/admin/categories-media/nouveau', function(){
+    this.render('categorieMediaUpdate');
+}, {layoutTemplate: 'LayoutAdmin', name: 'categorieMediaNew'});
 
 // Route administration
 //Router.route('/admin/Media', {name: 'admin.Media'});

@@ -1,0 +1,48 @@
+<template name="categorieMediaUpdate">
+   <div class="row">
+    <div class="small-12 medium-6 large-9 medium-centered large-centered columns">
+        <div class="at-form">      
+            <div class="at-title">
+                <h3>Création d'une catégorie média</h3>
+             </div>
+
+            <div class="at-catM-form">
+                <form id="at-catM-form">
+                    <!-- Champs Nom -->
+                    <div class="at-input row">
+                        <div class="large-12 columns">      
+                            <label for="input-Nom">
+                              Nom 
+                            </label>      
+                            
+                            <input type="text" id="input-name" name="input-name" 
+                                   value="{{#if isUpdate}}{{ data.name }}{{/if}}" 
+                                   placeholder="Nom" 
+                                   aria-label="Nom ">   
+                            
+                          
+                        </div>
+                    </div>   
+                    <!-- fin du champs Nom -->
+                    <!-- Champs description -->
+                    <div class="at-input row">
+                        <div class="large-12 columns">
+                            <label for="textarea-description">
+                              Description 
+                            </label>
+                            <textarea id="textarea-description" name="textarea-description" placeholder="Description" aria-label="Description ">{{#if isUpdate}}{{ data.textareaDescription }}{{/if}}</textarea>
+                        </div>
+                    </div>  
+                    <!-- fin du champs description -->
+                    {{#if isCreate}}                    
+                        <button type="submit" class="at-btn button small" id="input-btn">Enregistrer</button>
+                    {{/if}}                    
+                    {{#if isUpdate}}                    
+                        <button type="submit" class="at-btn button small" id="input-btnUpdate">Enregistrer</button>
+                    {{/if}}
+                </form>
+              </div> 
+        </div>
+    </div>
+  </div>
+</template>
